@@ -1,0 +1,150 @@
+.notFound {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 150px !important;
+
+  .notFoundTextBlock {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      font-size: 160px;
+      color: #003681;
+      font-weight: 900;
+    }
+
+    p {
+      text-align: center;
+      line-height: 34px;
+      color: #004cae;
+    }
+  }
+
+  .notFoundImg {
+    width: 867px;
+    height: 867px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .notFoundMobileImg {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .button {
+    display: flex;
+    justify-content: space-between;
+    background-color: $button-default;
+    color: white;
+    padding: 19px 130px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    align-items: center;
+    font-family: "Montserrat Alternates", Arial;
+    font-size: 24px;
+    width: fit-content;
+    gap: 8px;
+    margin-top: 54px;
+
+    &:hover {
+      background-color: $button-active;
+      cursor: pointer;
+    }
+
+    &Icon {
+      height: 51px;
+      width: 51px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .notFound {
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+
+    .button {
+      display: flex;
+      justify-content: space-between;
+      background-color: $button-default;
+      color: white;
+      padding: 19px 30px;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      align-items: center;
+      font-family: "Montserrat Alternates", Arial;
+      font-size: 24px;
+      width: 400px;
+      margin-left: 30px;
+      margin-top: 54px;
+
+      &:hover {
+        background-color: $button-active;
+        cursor: pointer;
+      }
+
+      &Icon {
+        height: 51px;
+        width: 51px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .notFoundImg {
+    display: none;
+  }
+
+  .notFoundMobileImg {
+    display: block;
+    width: 100%;
+    max-width: 383px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .notFoundMobileImg {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .notFound {
+    .notFoundTextBlock {
+      width: 100%;
+      .notFoundTitle {
+        font-size: 120px;
+      }
+      .notFoundText {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .button {
+    width: 100%;
+    padding: 33px 24px;
+    font-size: 16px;
+    margin-left: 0px !important;
+  }
+}

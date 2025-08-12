@@ -1,0 +1,42 @@
+.reviewBlock {
+  h1 {
+    margin-top: 175px;
+    margin-bottom: 100px;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 107%;
+    transition: all 0.3s ease;
+
+    span {
+      color: $primary-accent;
+    }
+  }
+}
+
+.reviewBlockCards {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 125px;
+  transition: all 0.3s ease;
+  justify-content: space-between;
+}
+.reviewBlockCards {
+  padding-bottom: 80px;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  .reviewBlock {
+    h1 {
+      margin-top: 100px;
+      margin-bottom: 50px;
+      font-size: 32px;
+
+      span {
+        font-size: inherit;
+      }
+    }
+  }
+}

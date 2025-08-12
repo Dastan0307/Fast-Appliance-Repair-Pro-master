@@ -1,0 +1,97 @@
+.aboutUsStartBlock {
+  margin-top: 38px;
+  .aboutusStartText {
+    h1 {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.aboutUsStartBlockContent {
+  display: flex;
+  gap: 31px;
+  justify-content: space-between;
+}
+.aboutUsStartBlockContentText {
+  width: 45%;
+  h1 {
+    font-size: 64px;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+}
+
+.aboutUsStartBlockImage {
+  width: 50%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  background-color: $button-default;
+  color: white;
+  padding: 20px 100px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  align-items: center;
+  font-family: "Montserrat Alternates", Arial;
+  font-size: 24px;
+  width: fit-content;
+  &:hover {
+    background-color: $button-active;
+    cursor: pointer;
+  }
+  &Icon {
+    height: 51px;
+    width: 51px;
+    margin-left: 5px;
+  }
+  h3 {
+    color: white;
+  }
+}
+.aboutUsStartBlockMobile {
+  display: none;
+}
+
+@media (max-width: 430px) {
+  .aboutUsStartBlockContent {
+    display: none;
+  }
+  .aboutUsStartBlockMobile {
+    display: block;
+    h1 {
+      font-size: 32px;
+    }
+  }
+  .aboutUsStartBlockImage {
+    width: 100%;
+  }
+  .aboutUsStartBlockMobileText {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify;
+  }
+  .button {
+    padding: 11px 37px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    h3 {
+      font-size: 16px;
+    }
+  }
+}

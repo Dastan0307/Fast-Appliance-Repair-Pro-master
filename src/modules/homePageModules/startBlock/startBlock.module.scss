@@ -1,0 +1,150 @@
+.startBlock {
+  margin-top: 171px;
+  margin-bottom: 180px;
+
+  &Content {
+    height: 960px;
+    width: 1260px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url("../../../assets/images/BackgroundStartBlock.png");
+    background-repeat: no-repeat;
+    padding: 68px 53px 105px 24px;
+    background-size: cover;
+    position: relative;
+    border-bottom-right-radius: 60px;
+    border-top-right-radius: 60px;
+
+    &Bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+      width: 45%;
+
+      h2 {
+        font-size: 36px;
+      }
+    }
+
+    &Top {
+      display: flex;
+      gap: 67px;
+      &Right {
+        h1 {
+          font-size: 70px;
+          color: $primary-accent;
+        }
+      }
+      &Left {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        max-width: 387px;
+        p {
+          font-size: 20px;
+          color: #215036;
+        }
+        h1 {
+          font-size: 71px;
+          color: $primary-accent;
+          margin-top: 8px;
+        }
+        h3 {
+          font-size: 22px;
+          color: #215036;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+  &Image {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  background-color: $button-default;
+  color: white;
+  padding: 19px 130px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  align-items: center;
+  font-family: "Montserrat Alternates", Arial;
+  font-size: 24px;
+  width: fit-content;
+  gap: 8px;
+  &:hover {
+    background-color: $button-active;
+    cursor: pointer;
+  }
+  &Icon {
+    height: 51px;
+    width: 51px;
+  }
+  h4 {
+    font-size: 24px;
+    color: white;
+  }
+}
+
+@media (max-width: 430px) {
+  .startBlock {
+    margin-top: 125px;
+    margin-bottom: 100px;
+  }
+  .startBlockContentTopRight {
+    h1 {
+      font-size: 33px;
+    }
+    h2 {
+      font-size: 16px;
+      color: #215036;
+      margin-top: 15px;
+    }
+    .startBlockImageMobile {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      width: 100%;
+      height: 326px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .startBlockAboutText {
+      background-color: #0b3b750d;
+      border-radius: 39.47px;
+      padding: 50px 15px;
+      h3 {
+        font-size: 24px;
+        color: #191623;
+      }
+      .button {
+        margin-top: 32px;
+        padding: 15px 0;
+        width: 100%;
+        background-color: #4a8dff;
+        border-radius: 36.55px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        h4 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

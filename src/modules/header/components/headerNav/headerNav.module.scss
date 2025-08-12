@@ -1,0 +1,56 @@
+.navItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: $background-black;
+  transition: 0.4s;
+  gap: 10px;
+  height: 70px;
+  vertical-align: middle;
+
+  &:hover {
+    cursor: pointer;
+    color: $primary-select !important;
+
+    .navLink {
+      color: $primary-select !important;
+    }
+
+    .dropdownIcon {
+      color: $primary-select !important;
+      transform: rotate(270deg);
+    }
+  }
+}
+
+.navLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: 0.4s;
+  height: 100%;
+
+  &:hover {
+    color: $primary-select !important;
+    cursor: pointer;
+  }
+}
+
+.dropdownIcon {
+  margin-left: 1px;
+  transform: rotate(90deg);
+  transition: transform 0.4s, color 0.4s;
+}
+
+.contactButton {
+  text-decoration: none;
+  color: $background-black;
+  background-color: $primary-select;
+  padding: 8px 16px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $primary-select;
+    cursor: pointer;
+  }
+}

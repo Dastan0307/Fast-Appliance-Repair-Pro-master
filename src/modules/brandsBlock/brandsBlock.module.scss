@@ -1,0 +1,11 @@
+.brandsBlockItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 13px;
+}
+
+@media (max-width: 430px) {
+  .brandsBlockItems {
+    gap: 5px;
+  }
+}

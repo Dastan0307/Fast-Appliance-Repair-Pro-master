@@ -1,0 +1,93 @@
+.HouseholdChemicals {
+	width: 100%;
+
+	margin-top: 191px;
+
+	.breadcrumbs {
+		margin-bottom: 100px;
+
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		a,
+		span {
+			font-family: 'Montserrat Alternates', sans-serif;
+
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: -2%;
+			color: #4a8dff;
+		}
+	}
+
+	.empty {
+		width: 100%;
+		min-height: 1260px;
+
+		display: flex;
+		flex-direction: column;
+
+		h2 {
+			font-family: 'Montserrat Alternates', sans-serif;
+			font-weight: 700;
+			font-size: 48px;
+			line-height: 100%;
+			color: #3f70c0;
+
+			margin: 0 auto;
+		}
+
+		p {
+			width: 400px;
+
+			font-family: 'Montserrat Alternates', sans-serif;
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 130%;
+			text-align: center;
+			color: #515151;
+
+			margin: 0 auto;
+		}
+	}
+
+	.products {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 40px 13px;
+	}
+}
+
+.productsData {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+@media screen and (max-width: 428px) {
+	.HouseholdChemicals {
+		max-width: 428px;
+		margin-top: 111px;
+
+		.breadcrumbs {
+			width: 387px;
+			height: 15px;
+
+			margin-bottom: 57px;
+
+			a,
+			span {
+				font-size: 14px;
+				white-space: nowrap;
+			}
+		}
+
+		.products {
+			display: flex;
+		}
+	}
+}

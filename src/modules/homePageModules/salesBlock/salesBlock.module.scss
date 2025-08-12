@@ -1,0 +1,19 @@
+.salesBlock {
+  margin-bottom: 200px;
+  h1 {
+    font-size: 64px;
+    color: $primary-accent;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 430px) {
+  .salesBlock {
+    margin-bottom: 100px;
+    margin-top: 30px;
+    h1 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+  }
+}

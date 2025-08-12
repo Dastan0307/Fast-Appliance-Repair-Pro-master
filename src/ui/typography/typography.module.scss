@@ -1,0 +1,147 @@
+.h1 {
+  font-size: calc(40px + $font-increase);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.h2 {
+  font-size: calc(28px + $font-increase);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.h3 {
+  font-size: calc(24px + $font-increase);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.h4 {
+  font-size: calc(18px + $font-increase);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.h5 {
+  font-size: calc(14px + $font-increase);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.h6 {
+  font-size: calc(13px + $font-increase);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  text-transform: uppercase;
+  letter-spacing: 0.39px;
+}
+
+.bodyText {
+  font-size: calc(16px + $font-increase);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.smallBodyText {
+  font-size: calc(14px + $font-increase);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+.extraSmallBodyText {
+  font-size: calc(13px + $font-increase);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+@media (max-width: 1250px) {
+  .h1 {
+    font-size: calc(32px + $font-increase);
+  }
+  .h2 {
+    font-size: calc(22px + $font-increase);
+  }
+  .h3 {
+    font-size: calc(18px + $font-increase);
+  }
+  .h4 {
+    font-size: calc(16px + $font-increase);
+  }
+  .h5 {
+    font-size: calc(15px + $font-increase);
+  }
+  .h6 {
+    font-size: calc(10px + $font-increase);
+  }
+  .bodyText {
+    font-size: calc(15px + $font-increase);
+  }
+}
+
+@media (max-width: 1024px) {
+  .h2 {
+    font-size: calc(28px + $font-increase);
+  }
+  .h3 {
+    font-size: calc(22px + $font-increase);
+  }
+  .h4 {
+    font-size: calc(18px + $font-increase);
+  }
+  .h5 {
+    font-size: calc(16px + $font-increase);
+  }
+  .h6 {
+    font-size: calc(13px + $font-increase);
+  }
+  .bodyText {
+    font-size: calc(16px + $font-increase);
+  }
+}
+
+@media (max-width: 460px) {
+  .h1 {
+    font-size: calc(28px + $font-increase);
+  }
+  .h2 {
+    font-size: calc(22px + $font-increase);
+  }
+  .h3 {
+    font-size: calc(18px + $font-increase);
+  }
+  .h4 {
+    font-size: calc(16px + $font-increase);
+  }
+  .h5 {
+    font-size: calc(15px + $font-increase);
+  }
+  .bodyText {
+    font-size: calc(15px + $font-increase);
+  }
+}
+
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.semibold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+
+.primary {
+  color: #4a8dff;
+}

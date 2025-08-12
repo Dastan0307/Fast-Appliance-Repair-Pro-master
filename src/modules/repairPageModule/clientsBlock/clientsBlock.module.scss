@@ -1,0 +1,16 @@
+.clientsBlock {
+  padding-top: 191px;
+  h1 {
+    font-size: 64px;
+    color: $primary-accent;
+    margin-bottom: 100px;
+  }
+  span {
+    color: $background-black;
+  }
+}
+
+.clientsItems {
+  display: flex;
+  gap: 10px;
+}

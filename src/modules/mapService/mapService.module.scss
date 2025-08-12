@@ -1,0 +1,254 @@
+.repairBlock {
+  padding: 150px 0 0;
+  height: 1000px;
+  margin-bottom: 150px;
+
+  h1 {
+    color: $primary-accent;
+    font-size: 64px;
+  }
+  span {
+    color: $background-black;
+  }
+}
+
+.repairContent {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.mapSidebar {
+  width: 590px;
+  height: 634px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  background-image: url("../../assets/images/ArrowMap.png");
+  background-repeat: no-repeat;
+  margin-left: 50px;
+}
+
+.sidebarPoint {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  transition: 0.4s;
+  span {
+    color: #4a8dff;
+    font-size: 18px;
+    transition: 0.4s;
+  }
+  &:hover {
+    filter: brightness(110%);
+    span {
+      color: #000;
+    }
+  }
+}
+
+.sidebarPoint1.active {
+  font-weight: bold;
+  color: #000;
+}
+
+.sidebarPointLine {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: $background-black;
+}
+
+.one {
+  top: -35px;
+  left: -36px;
+}
+
+.two {
+  top: -35px;
+  right: 200px;
+}
+.three {
+  top: 50px;
+  left: 170px;
+}
+.four {
+  top: 150px;
+  left: 20px;
+}
+.five {
+  top: 149px;
+  right: 200px;
+}
+.six {
+  top: 273px;
+  left: 10px;
+}
+.seven {
+  top: 273px;
+  right: 172px;
+}
+.eight {
+  bottom: 184px;
+  left: 0px;
+}
+.nine {
+  right: 150px;
+  bottom: 185px;
+}
+.ten {
+  bottom: 85px;
+  left: 170px;
+}
+
+.eleven {
+  bottom: 1px;
+  right: 75px;
+}
+
+.infoWindow {
+  max-width: 250px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.infoWindowTitle {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #191623;
+}
+
+.reviewsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.reviewItem {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.reviewAuthor {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+
+  a {
+    color: #4a8dff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.reviewRating {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.reviewText {
+  font-size: 12px;
+  color: #333;
+  margin: 0;
+}
+
+.noReviews {
+  font-size: 12px;
+  color: #555;
+  margin: 8px 0 0;
+}
+
+@media (max-width: 430px) {
+  .repairContent {
+    flex-direction: column;
+  }
+  .mapSidebar {
+    width: 389px;
+    margin-left: 0;
+    background-size: contain;
+    background-image: url("../../assets/images/arrowMobile.png");
+  }
+  .repairBlock {
+    height: 1500px;
+    padding-top: 80px;
+    h1 {
+      font-size: 32px;
+    }
+  }
+  .mapBlock {
+    width: 100%;
+    height: 428px;
+  }
+  .one {
+    top: -35px;
+    left: 30px;
+  }
+  .two {
+    top: -46px;
+    right: 40px;
+    gap: 20px;
+  }
+  .three {
+    top: 59px;
+    left: 20px;
+    gap: 5px;
+    transform: translateX(50%);
+  }
+  .four {
+    top: 128px;
+    left: 10px;
+    gap: 20px;
+  }
+  .five {
+    top: 143px;
+    right: 97px;
+    gap: 5px;
+  }
+  .six {
+    top: 260px;
+    left: 5px;
+    gap: 5px;
+  }
+  .seven {
+    top: 245px;
+    right: 95px;
+    gap: 20px;
+  }
+  .eight {
+    bottom: 212px;
+    left: 0px;
+    gap: 20px;
+  }
+  .nine {
+    right: 80px;
+    bottom: 212px;
+    gap: 3px;
+  }
+  .ten {
+    bottom: 117px;
+    left: 115px;
+  }
+  .eleven {
+    bottom: 37px;
+    right: 130px;
+  }
+}

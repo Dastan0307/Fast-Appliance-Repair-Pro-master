@@ -1,0 +1,189 @@
+.brandDetailTechnic {
+  margin-top: 100px;
+  h1 {
+    margin-bottom: 80px;
+    font-size: 64px;
+  }
+}
+
+.articleText {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #000000;
+  font-weight: 400;
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    margin: 1em 0 0.5em;
+  }
+
+  ul,
+  ol {
+    list-style-position: outside;
+    list-style-type: disc;
+    margin: 1em 0;
+    padding-left: 1.5em;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  a {
+    color: blue;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  br {
+    display: block;
+    margin-bottom: 0.5em;
+    content: "";
+  }
+}
+
+.brandDetailTechnic {
+  margin-top: 6.25rem;
+
+  h1 {
+    margin-bottom: 5rem;
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 75em) {
+    margin-top: 5rem;
+
+    h1 {
+      margin-bottom: 3.75rem;
+      font-size: 3.5rem;
+    }
+  }
+
+  @media (max-width: 62em) {
+    margin-top: 3.75rem;
+
+    h1 {
+      margin-bottom: 2.5rem;
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 48em) {
+    margin-top: 2.5rem;
+
+    h1 {
+      margin-bottom: 1.875rem;
+      font-size: 2.25rem;
+    }
+  }
+
+  @media (max-width: 36em) {
+    margin-top: 1.25rem;
+
+    h1 {
+      margin-bottom: 1.25rem;
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.articleText {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #000000;
+  font-weight: 400;
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    margin: 1em 0 0.5em;
+    line-height: 1.3;
+  }
+
+  ul,
+  ol {
+    list-style-position: outside;
+    list-style-type: disc;
+    margin: 1em 0;
+    padding-left: 1.5em;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  a {
+    color: blue;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  br {
+    display: block;
+    margin-bottom: 0.5em;
+    content: "";
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
+  }
+
+  @media (max-width: 75em) {
+    font-size: 1.375rem;
+  }
+
+  @media (max-width: 62em) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 48em) {
+    font-size: 1.125rem;
+  }
+
+  @media (max-width: 36em) {
+    font-size: 1rem;
+  }
+}

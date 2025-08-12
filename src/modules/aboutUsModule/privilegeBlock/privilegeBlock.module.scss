@@ -1,0 +1,265 @@
+.privilegeBlock {
+  margin-top: 200px;
+  margin-bottom: 180px;
+  h1 {
+    font-size: 64px;
+    margin-bottom: 75px;
+  }
+  
+}
+
+.privilegeBlockItems {
+  display: flex;
+  gap: 20px;
+}
+
+.privilegeBlockItem {
+  border: 3px solid #3b77e0;
+  border-radius: 15px;
+  padding: 23px 55px 30px 30px;
+  color: #3b77e0;
+  height: fit-content;
+  max-width: 620px;
+}
+
+.privilegeBlockItemImage {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 10px;
+  h2 {
+    font-size: 96px;
+  }
+}
+
+.privilegeBlockItemText {
+  h3 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 11px;
+  }
+}
+
+.privilegeBlockItemsLeft,
+.privilegeBlockItemsRight {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.privilegeBlockItemsLeft {
+  margin-top: 22px;
+}
+
+$mobile-breakpoint: 576px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px; 
+
+.privilegeBlock {
+  margin-top: 200px;
+  margin-bottom: 180px;
+  padding: 0 20px; 
+
+  @media (max-width: $desktop-breakpoint) {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 0 15px; 
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 64px;
+    margin-bottom: 75px;
+    text-align: center;
+
+    @media (max-width: $desktop-breakpoint) {
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: $tablet-breakpoint) {
+      font-size: 38px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.privilegeBlockItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; 
+ 
+  @media (min-width: $desktop-breakpoint + 1px) {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    gap: 20px;
+    .privilegeBlockItemsLeft,
+    .privilegeBlockItemsRight {
+      flex: 1;
+      max-width: 620px; 
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .privilegeBlockItemsLeft {
+      margin-top: 22px; 
+    }
+    .privilegeBlockItemsRight {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: $tablet-breakpoint + 1px) and (max-width: $desktop-breakpoint) {
+    flex-direction: row;
+    gap: 20px; 
+
+    .privilegeBlockItem {
+      flex-basis: calc(50% - 10px); 
+      max-width: calc(50% - 10px);
+      height: auto;
+    }
+  }
+
+
+  @media (min-width: $mobile-breakpoint + 1px) and (max-width: $tablet-breakpoint) {
+    flex-direction: row;
+    gap: 15px; 
+
+    .privilegeBlockItem {
+      flex-basis: calc(50% - 7.5px);
+      max-width: calc(50% - 7.5px);
+      height: auto; 
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+    gap: 15px; 
+
+    .privilegeBlockItem {
+      flex-basis: 100%; 
+      max-width: 100%;
+      height: 340px; 
+      padding: 20px;
+      display: flex;
+      flex-direction: column; 
+      justify-content: space-between; 
+    }
+  }
+}
+
+.privilegeBlockItemsLeft,
+.privilegeBlockItemsRight {
+  @media (max-width: $desktop-breakpoint) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    width: 100%;
+  }
+}
+
+.privilegeBlockItemsLeft {
+  @media (max-width: $desktop-breakpoint) {
+    margin-top: 0;
+  }
+}
+
+
+.privilegeBlockItem {
+  border: 3px solid #3b77e0;
+  border-radius: 15px;
+  padding: 23px 55px 30px 30px;
+  color: #3b77e0;
+  height: fit-content; 
+  max-width: 620px;
+
+
+  @media (max-width: $desktop-breakpoint) {
+    max-width: 100%;
+  }
+}
+
+.privilegeBlockItemImage {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 10px;
+
+  h2 {
+  
+    font-size: 96px;
+
+    @media (max-width: $desktop-breakpoint) {
+      font-size: 72px;
+    }
+    @media (max-width: $tablet-breakpoint) {
+      font-size: 64px;
+    }
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 48px;
+    }
+  }
+
+  div { 
+    img { 
+      max-width: 100%;
+      height: auto;
+      width: 90px; 
+
+      @media (max-width: $desktop-breakpoint) {
+        width: 80px;
+        height: 80px;
+      }
+
+      @media (max-width: $mobile-breakpoint) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+.privilegeBlockItemText {
+  h3 {
+    font-size: 24px;
+    @media (max-width: $tablet-breakpoint) {
+      font-size: 22px;
+    }
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 20px;
+    }
+  }
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 11px;
+    @media (max-width: $tablet-breakpoint) {
+      font-size: 18px;
+    }
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 16px;
+      margin-top: 8px;
+    }
+  }
+}

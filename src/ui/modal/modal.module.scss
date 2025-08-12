@@ -1,0 +1,35 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 80%);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 12px;
+  width: 1280px;
+  height: 90vh;
+  z-index: 1001;
+  display: flex;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 430px) {
+  .modal {
+    width: 100%;
+    height: 80vh;
+  }
+  .close {
+    right: 10px;
+  }
+}

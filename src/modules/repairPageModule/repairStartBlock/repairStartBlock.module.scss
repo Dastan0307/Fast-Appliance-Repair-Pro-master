@@ -1,0 +1,89 @@
+.repairStartBlock {
+  margin-top: 100px;
+  margin-bottom: 180px;
+  h1 {
+    font-size: 61px;
+    color: $primary-accent;
+    margin-bottom: 62px;
+    max-width: 914px;
+  }
+  span {
+    color: $background-black;
+  }
+  p {
+    width: 639px;
+    font-size: 24px;
+    line-height: 107%;
+  }
+}
+
+.button {
+  margin-top: 71px;
+  max-width: 492px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $button-default;
+  padding: 19px 54px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  align-items: center;
+  font-family: "Montserrat Alternates", Arial;
+  h3 {
+    color: white;
+    font-size: 24px;
+  }
+  &:hover {
+    background-color: $button-active;
+  }
+}
+
+.repairStartBlockContent {
+  display: flex;
+}
+
+.repairStartBlockImage {
+  margin-top: 40px;
+}
+.repairStartBlockMobile {
+  display: none;
+}
+
+@media (max-width: 430px) {
+  .repairStartBlockMobile {
+    display: block;
+    p {
+      font-size: 16px;
+      width: 100%;
+      line-height: 22px;
+    }
+    h1 {
+      font-size: 32px;
+    }
+  }
+  .repairStartBlock {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .repairStartBlockContent {
+    display: none;
+  }
+  .button {
+    margin-top: 40px;
+    padding: 10px 37px;
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .repairStartBlockImage {
+    width: 100%;
+    margin-bottom: 40px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

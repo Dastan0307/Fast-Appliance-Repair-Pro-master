@@ -1,0 +1,13 @@
+.dropdownLink {
+    text-decoration: none;
+    color: $background-white !important;
+    padding: 5px 15px;
+    display: block;
+    transition: 0.4s;
+    white-space: nowrap;
+
+    &:hover {
+      color: $teal-accent !important;
+      cursor: pointer;
+    }
+  }

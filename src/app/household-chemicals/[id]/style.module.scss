@@ -1,0 +1,234 @@
+.ProductPage {
+	width: 100%;
+
+	margin-top: 191px;
+
+	.breadcrumbs {
+		margin-bottom: 100px;
+
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		a,
+		span {
+			font-family: 'Montserrat Alternates', sans-serif;
+
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 24px;
+			letter-spacing: -2%;
+			color: #4a8dff;
+		}
+	}
+
+	.productMobile {
+		display: none;
+	}
+
+	.productDesktop {
+		display: flex;
+
+		.image {
+			width: 630px;
+			height: 600px;
+			top: 315px;
+			left: 80px;
+			border-radius: 30px;
+		}
+
+		.productIn {
+			width: 630px;
+
+			.name {
+				font-family: 'Montserrat Alternates', sans-serif;
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 100%;
+				margin-bottom: 18px;
+
+				color: #010101;
+			}
+
+			.desc {
+				font-family: 'Montserrat Alternates', sans-serif;
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 100%;
+				margin-bottom: 8px;
+
+				color: #010101;
+			}
+
+			.descriptionBlock {
+				width: 630px;
+				height: 396px;
+				border-radius: 20px;
+				padding: 16px 16px 16px 16px;
+				white-space: pre-line;
+				margin-bottom: 19px;
+
+				background: #03011f0d;
+
+				font-family: 'Montserrat Alternates', sans-serif;
+				font-weight: 500;
+				font-style: Medium;
+				font-size: 16px;
+				line-height: 140%;
+				color: #515151;
+
+				&::-webkit-scrollbar {
+					width: 6px;
+					background-color: transparent;
+					margin-right: 10px;
+				}
+
+				span {
+					display: block;
+					overflow: auto;
+
+					height: 364px;
+				}
+			}
+
+			.price {
+				font-family: 'Montserrat Alternates', sans-serif;
+				font-weight: 600;
+				font-size: 28px;
+				line-height: 100%;
+				margin-bottom: 18px;
+
+				color: #010101;
+			}
+
+			.btn {
+				width: 305px;
+				height: 49px;
+				border-radius: 10px;
+				padding-top: 16px;
+				padding-right: 10px;
+				padding-bottom: 16px;
+				padding-left: 10px;
+
+				background: #4a8dff;
+				color: white;
+
+				font-family: 'Montserrat Alternates', sans-serif;
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 100%;
+			}
+		}
+	}
+}
+
+.descriptionBlock::-webkit-scrollbar-thumb {
+	background-color: #dbdbdb;
+	border-radius: 3px;
+}
+
+@media screen and (max-width: 428px) {
+	.ProductPage {
+		max-width: 428px;
+		margin-top: 111px;
+
+		.breadcrumbs {
+			width: 387px;
+			height: 15px;
+
+			margin-bottom: 57px;
+
+			a,
+			span {
+				font-size: 14px;
+				white-space: nowrap;
+			}
+		}
+
+		.productDesktop {
+			display: none;
+		}
+
+		.productMobile {
+			display: flex;
+			flex-direction: column;
+
+			.image {
+				width: 396px;
+				height: 400px;
+
+				margin-bottom: 16px;
+			}
+
+			.productIn {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 24px;
+
+				.name {
+					font-family: 'Montserrat Alternates', sans-serif;
+					font-weight: 600;
+					font-size: 20px;
+					line-height: 100%;
+
+					color: #010101;
+				}
+
+				.price {
+					font-family: 'Montserrat Alternates', sans-serif;
+					font-weight: 700;
+					font-size: 20px;
+					line-height: 100%;
+
+					color: #010101;
+				}
+			}
+
+			.btn {
+				width: 396px;
+				height: 52px;
+				border-radius: 10px;
+				padding-top: 16px;
+				padding-right: 10px;
+				padding-bottom: 16px;
+				padding-left: 10px;
+
+				margin-bottom: 32px;
+
+				background: #4a8dff;
+				color: white;
+
+				font-family: 'Montserrat Alternates', sans-serif;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 100%;
+			}
+
+			.desc {
+				font-family: 'Montserrat Alternates', sans-serif;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 100%;
+
+				color: #010101;
+
+				margin-bottom: 16px;
+			}
+
+			.descriptionBlock {
+				width: 396px;
+				border-radius: 20px;
+				padding: 16px 16px 16px 16px;
+
+				background: #03011f0d;
+
+				font-family: 'Montserrat Alternates', sans-serif;
+				font-weight: 500;
+				font-style: Medium;
+				font-size: 16px;
+				line-height: 140%;
+				color: #515151;
+			}
+		}
+	}
+}

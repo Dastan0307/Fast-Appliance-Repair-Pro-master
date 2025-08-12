@@ -1,0 +1,70 @@
+{
+  "main": {
+    "title": "Fast Appliance Repair Pro | Canada‑Wide Appliance Repair & Installation",
+    "description": "Fast Appliance Repair Pro provides fast, reliable appliance repair and installation across Canada. Appliance repair in North York, ON. Appliance repair near me. Licensed, certified techs, transparent pricing, and 90‑day warranty."
+  },
+  "about": {
+    "title": "About Us | Licensed Appliance Experts Across Canada",
+    "description": "Fast Appliance Repair Pro delivers expert, factory‑trained service nationwide. Learn about our certified technicians, honest pricing, and customer‑first guarantee."
+  },
+  "services": {
+    "title": "Our Services | Appliance Repair & Installation Canada",
+    "description": "Comprehensive appliance services—from fridge & washer repair to gas stove and microwave installation. Same‑day availability, parts, labour & 90‑day warranty Canada‑wide."
+  },
+  "blog": {
+    "title": "Blog | Appliance Care Tips & Troubleshooting Canada‑Wide",
+    "description": "Get expert maintenance tips, DIY troubleshooting guides, warranty news, and seasonal appliance advice from Fast Appliance Repair Pro."
+  },
+  "job-offer": {
+    "title": "Careers | Appliance Technician Jobs Across Canada",
+    "description": "Join Fast Appliance Repair Pro’s national team! Hiring licensed appliance techs, dispatchers & service staff. Grow your career with a top Canadian employer."
+  },
+  "brands": {
+    "title": "Brands We Service | Samsung, LG, Bosch & More — Canada",
+    "description": "Fast Appliance Repair Pro services all major brands—Samsung, LG, Bosch, Whirlpool, GE, Miele—nationwide with OEM parts and certified techs.",
+    "samsung": {
+      "title": "Samsung Appliance Repair Canada | Certified Technicians",
+      "description": "Expert Samsung refrigerator, washer, dryer repair across Canada. Certified techs, OEM parts, same‑day service, and transparent flat‑rate pricing."
+    },
+    "lg": {
+      "title": "LG Appliance Repair Canada | Nationwide Coverage",
+      "description": "LG appliance repair Canada‑wide. Fast Appliance Repair Pro uses genuine parts, offers warranty, and ensures fast, reliable service for all LG models."
+    }
+  },
+  "applianceRepair": {
+    "title": "Appliance Repair Canada | All Makes & Models Fixed Fast",
+    "description": "Nationwide appliance repair—refrigerators, washers, dryers, ovens, dishwashers, gas appliances. Flat-rate estimates, OEM parts, 90-day parts & labour warranty.",
+    "refrigerator": {
+      "title": "Refrigerator Repair Canada | Same‑Day and Emergency Service",
+      "description": "Canada‑wide fridge repair for cooling, leaks, ice makers, compressors. Certified techs, OEM parts, transparent pricing, 90‑day warranty."
+    },
+    "washing-machine": {
+      "title": "Washing Machine Repair Canada | Quick & Reliable Fixes",
+      "description": "Nationwide washing machine repair for leaks, spin, noises. Same‑day service, clear cost estimates, warranty included."
+    }
+  },
+  "applianceInstall": {
+    "title": "Appliance Installation Canada | Safe & Professional Setup",
+    "description": "Canada‑wide appliance installation—refrigerators, washers, dryers, ovens. Certified installation, safe hookups, testing, and full warranty.",
+    "refrigerator": {
+      "title": "Refrigerator Installation Canada | Certified & Safe",
+      "description": "Professional fridge installation across Canada. Certified techs, proper leveling/hookups, leak tests, and 90‑day workmanship warranty."
+    },
+    "washing-machine": {
+      "title": "Washing Machine Installation Canada | Leak‑Free Setup",
+      "description": "Expert washer installation Canada‑wide—secure hookups, leveling, test cycles, and certified workmanship guarantee."
+    }
+  },
+  "serviceAreas": {
+    "title": "Service Areas | All Provinces & Major Cities in Canada",
+    "description": "Fast Appliance Repair Pro operates Canada‑wide: from Ontario to BC. Licensed techs near you, same‑day service, clear pricing, warranty.",
+    "toronto": {
+      "title": "Appliance Repair & Installation in Toronto | Fast Appliance Repair Pro",
+      "description": "Trusted appliance repair & installation in Toronto. Same‑day, flat-rate pricing, licensed techs, parts & labour warranty."
+    },
+    "ottawa": {
+      "title": "Appliance Repair & Installation in Ottawa | Canada‑Wide Service",
+      "description": "Expert appliance service in Ottawa. Certified techs, real-time pricing, quick response, and dependable warranty."
+    }
+  }
+}

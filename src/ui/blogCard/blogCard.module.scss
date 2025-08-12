@@ -1,0 +1,36 @@
+.blogCard {
+  padding: 80px 37px;
+  border-radius: 18px;
+  max-width: 413px;
+  min-height: 574px;
+  display: flex;
+  align-items: end;
+  transition: 0.4s;
+  &:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)) brightness(110%);
+  }
+
+  h3 {
+    color: $background-white;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 20px;
+    color: $background-white;
+  }
+}
+
+@media (max-width: 430px) {
+  .blogCard {
+    padding: 80px 27px 80px 37px;
+    h3 {
+      font-size: 24px;
+      line-height: 40px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 34px;
+    }
+  }
+}

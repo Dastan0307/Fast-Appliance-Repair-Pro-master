@@ -1,0 +1,13 @@
+.brandBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 90px;
+}
+
+@media (max-width: 430px) {
+  .brandBlock {
+    margin-bottom: 50px;
+    gap: 10px;
+  }
+}

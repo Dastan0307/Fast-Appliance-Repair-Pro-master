@@ -1,0 +1,27 @@
+.helpBlock {
+  padding-bottom: 100px;
+  h1 {
+    font-size: 64px;
+    margin-bottom: 100px;
+  }
+  span {
+    color: $primary-accent;
+  }
+}
+
+.helpBlockCardsItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (max-width: 430px) {
+  .helpBlock {
+    padding-bottom: 50px;
+    h1 {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+  }
+}

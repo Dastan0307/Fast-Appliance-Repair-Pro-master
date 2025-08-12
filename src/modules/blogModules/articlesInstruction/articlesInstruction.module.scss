@@ -1,0 +1,25 @@
+.articlesInstruction {
+  margin-bottom: 150px;
+  h1 {
+    font-size: 64px;
+    margin-bottom: 105px;
+  }
+}
+.video {
+  width: 100%;
+  height: 800px;
+}
+
+@media (max-width: 430px) {
+  .articlesInstruction {
+    margin-bottom: 100px;
+    h1 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+  }
+  .video {
+    height: 300px;
+    border-radius: 50px;
+  }
+}

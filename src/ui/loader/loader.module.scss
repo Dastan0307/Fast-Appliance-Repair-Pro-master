@@ -1,0 +1,42 @@
+.loaderWrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: flex;
+  gap: 8px;
+
+  span {
+    width: 16px;
+    height: 16px;
+    background-color: #3b77e0;
+    border-radius: 50%;
+    animation: pulse 0.9s infinite ease-in-out;
+  }
+
+  span:nth-child(2) {
+    animation-delay: 0.15s;
+  }
+
+  span:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}

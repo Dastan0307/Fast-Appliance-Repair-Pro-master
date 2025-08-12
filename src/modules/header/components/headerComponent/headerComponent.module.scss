@@ -1,0 +1,91 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  background-color: $background-grey;
+  position: fixed;
+  border-radius: 128px;
+  padding: 20px 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  top: 50px;
+  &Container {
+    width: 1120px;
+    margin: 0 auto;
+  }
+}
+.headerContent {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  height: auto;
+  margin-right: 10px;
+}
+
+.nav {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.contactButton {
+  background-color: $button-hover;
+  color: $background-white !important;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: $button-default;
+  }
+}
+
+
+.cart {
+	position: relative;
+
+	margin-left: 20px;
+	width: 49px;
+	height: 49px;
+	background-color: #ff0000;
+	border-radius: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	span {
+		position: absolute;
+		top: -5px;
+		left: 35px;
+
+		width: 24px;
+		height: 24px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border-radius: 50%;
+
+		color: #ff0000;
+		background-color: #fff;
+	}
+}
