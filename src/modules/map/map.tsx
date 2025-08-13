@@ -15,6 +15,7 @@ import { getMapData } from "./model/mapModel";
 import useMediaQuery from "@utils/hooks/useMediaQuery";
 
 function getRandomItems<T>(arr: T[], count: number): T[] {
+  if (!Array.isArray(arr)) return [];
   const shuffled = [...arr].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count);
 }

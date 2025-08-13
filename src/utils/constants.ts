@@ -61,6 +61,7 @@ export const footerLinks: footerLink[] = [
   { label: "Brands", href: "/brands" },
   { label: "Blog", href: "/blog" },
   { label: "Job offer", href: "/vacancies" },
+  { label: "Household chemicals", href: "/household-chemicals"}
 ];
 
 export const footerLinkDays: footerDay[] = [

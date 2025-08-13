@@ -18,7 +18,7 @@ export const QuestionsItems = () => {
     const fetchFaqs = async () => {
       try {
         const response = await getFaqsData();
-        setFaqs(response.results || []);
+        setFaqs(response?.results || []);
       } catch (error) {
         console.error("Failed to fetch FAQs:", error);
         setFaqs([]);

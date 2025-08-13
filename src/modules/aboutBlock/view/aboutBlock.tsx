@@ -24,17 +24,37 @@ const AboutBlock = () => {
   const [headersBrandData, setHeadersBrandData] = useState<BrandHeader[]>([]);
   const isMobile = useMediaQuery("(max-width: 430px)");
 
-  const getAbout = async () => {
-    try {
-      const response = await getData();
-      const headersBrandData = await getHeaderBrands();
-      setResults(response[0] || {});
-      setHeadersBrandData(headersBrandData);
-    } catch (error) {
-      console.error("Error fetching about data:", error);
-    }
-  };
+const getAbout = async () => {
+  try {
+    const response = await getData();
+    const headersBrandDataRes = await getHeaderBrands();
 
+    if (Array.isArray(response) && response.length > 0) {
+      setResults(response[0]);
+    } else {
+      console.log("getData() вернул не массив или пустой массив:", response);
+      setResults({
+        translated_mission: "",
+        translated_experience: "",
+      });
+    }
+
+    if (Array.isArray(headersBrandDataRes)) {
+      setHeadersBrandData(headersBrandDataRes);
+    } else {
+      console.log("getHeaderBrands() вернул не массив:", headersBrandDataRes);
+      setHeadersBrandData([]);
+    }
+
+  } catch (error) {
+    console.log("Error fetching about data:", error);
+    setResults({
+      translated_mission: "",
+      translated_experience: "",
+    });
+    setHeadersBrandData([]);
+  }
+};
   useEffect(() => {
     getAbout();
   }, []);

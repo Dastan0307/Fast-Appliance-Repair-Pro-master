@@ -49,11 +49,13 @@ export const Carousel = <T,>({
     };
   }, [direction, speed]);
 
+  const safeItems = Array.isArray(items) ? items : [];
+
   return (
     <div className={classes.carousel}>
       <div className={classes.trackWrapper}>
         <div ref={trackRef} className={classes.track}>
-          {[...items, ...items].map((item, i) => (
+          {[...safeItems, ...safeItems].map((item, i) => (
             <div key={i} className={classes.card}>
               {renderItem(item, i)}
             </div>

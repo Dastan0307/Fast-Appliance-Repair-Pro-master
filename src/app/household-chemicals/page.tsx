@@ -25,6 +25,7 @@ export default function HouseholdChemicals() {
 			try {
 				const response = await fetch(`${api}/household_chemicals/`, {
 					method: 'GET',
+					credentials: 'include',
 					headers: {
 						'Content-Type': 'application/json',
 						'ngrok-skip-browser-warning': 'true',

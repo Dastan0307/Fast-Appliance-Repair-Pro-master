@@ -332,8 +332,10 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({
 				`${process.env.NEXT_PUBLIC_API}/orders/`,
 				{
 					method: 'POST',
+					credentials: 'include',	
 					headers: {
 						'Content-Type': 'application/json',
+						'ngrok-skip-browser-warning': 'true',
 					},
 					body: JSON.stringify(orderData),
 				}
