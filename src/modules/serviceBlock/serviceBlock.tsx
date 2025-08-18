@@ -8,7 +8,7 @@ export default function ServiceBlock() {
       <MultiContainer>
         <div className={classes.serviceBlockContent}>
           <Typography variant="h3" weight="semibold">
-            We service almost all appliance brands
+            We service all appliance make and models!
           </Typography>
           <Typography variant="p" weight="regular">
             —from well-known to less common ones. Our technicians have

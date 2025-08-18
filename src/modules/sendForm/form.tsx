@@ -132,7 +132,7 @@ const Form: FC<FormProps> = ({ isVacancy = false, isModal = false }) => {
     >
       <MultiContainer>
         <Typography variant="h2" weight="bold">
-          {isVacancy ? "Form to reply" : "Do you need reliable services?"}
+          {isVacancy ? "Form to reply" : "Contact for reliable service!"}
         </Typography>
 
         <div
@@ -191,13 +191,13 @@ const Form: FC<FormProps> = ({ isVacancy = false, isModal = false }) => {
                 )}
               </>
             )}
-            <input
+            {/* <input
               type="text"
               name="vacancy"
               placeholder="Please indicate the vacancy you are applying for"
               value={formData.vacancy}
               onChange={handleChange}
-            />
+            /> */}
             {errors.vacancy && (
               <span className={classes.error}>{errors.vacancy}</span>
             )}

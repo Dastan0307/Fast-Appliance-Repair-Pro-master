@@ -65,7 +65,7 @@ const OurWorksList = () => {
     <section className={classes.ourWorksList}>
       <MultiContainer>
         <Typography variant="h1" weight="bold">
-          Our Works
+          Our Work
         </Typography>
         {!isMobile && (
           <Pagination

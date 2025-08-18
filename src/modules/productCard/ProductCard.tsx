@@ -8,7 +8,7 @@ import styles from './style.module.scss'
 interface Props {
   id: number;            
   title: string;          
-  image: string;           
+  image_url: string;           
   price: number;          
   is_available: boolean;
   description: string;    
@@ -19,7 +19,7 @@ export default function ProductCard({
 	description,
 	price,
 	is_available: available,
-	image,
+	image_url,
 }: Props) {
 	const handleAddToCart = async () => {
 		try {
@@ -35,7 +35,7 @@ export default function ProductCard({
 			<Link
 				href={`/household-chemicals/${id}`}
 			>
-				<Image src={image} alt={title} className={styles.image} width={300} height={300} />
+				<Image src={image_url} alt={title} className={styles.image} width={300} height={300} />
 			</Link>
 
 			<h3 className={styles.name}>{title}</h3>

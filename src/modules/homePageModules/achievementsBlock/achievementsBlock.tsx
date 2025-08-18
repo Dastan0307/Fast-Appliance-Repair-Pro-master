@@ -17,7 +17,7 @@ const AchievementsBlock = () => {
           </div>
           <div className={classes.achievementsBlockItem}>
             <Typography variant="h2" weight="normal">
-              1 month
+              3 month warranty
             </Typography>
             <Typography variant="p" weight="regular">
               Warranties for details
@@ -25,7 +25,7 @@ const AchievementsBlock = () => {
           </div>
           <div className={classes.achievementsBlockItem}>
             <Typography variant="h2" weight="normal">
-              5+
+              5+ services provided
             </Typography>
             <Typography variant="p" weight="regular">
               Provided services

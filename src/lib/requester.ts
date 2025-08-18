@@ -6,10 +6,17 @@ export const requester = async (url: string) => {
       throw new Error("Base url not defined!");
     }
 
-    const response = await fetch(url, { next: { revalidate: 120 } });
+    const response = await fetch(url, {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+        "ngrok-skip-browser-warning": "true",
+      },
+    });
 
     if (!response.ok) {
-      throw new Error(`Request failed with status ${response.status}`);
+      throw new Error(`Request failed with status ${response?.status}`);
     }
 
     const responseData = await response.json();

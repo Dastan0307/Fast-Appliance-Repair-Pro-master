@@ -9,7 +9,7 @@ import styles from './style.module.scss'
 interface Product {
 	id: number
 	title: string
-	image: string
+	image_url: string
 	price: number
 	is_available: boolean
 	description: string

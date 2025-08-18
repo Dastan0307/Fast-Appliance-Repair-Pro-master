@@ -94,7 +94,7 @@ const BrandBlock = () => {
 	if (images.length === 0) {
 		return (
 			<section className={classes.brandBlock}>
-				Нет брендов для отображения
+				There are no brands to display.
 			</section>
 		)
 	}

@@ -11,7 +11,7 @@ const PrivilegeBlock = () => {
     <section className={classes.privilegeBlock}>
       <MultiContainer>
         <Typography variant="h1" weight="bold">
-          What will you get by contacting us?
+          What You Can Expect When You Call Fast Appliance Repair Pro
         </Typography>
         <div className={classes.privilegeBlockItems}>
           <div className={classes.privilegeBlockItemsLeft}>
@@ -26,10 +26,10 @@ const PrivilegeBlock = () => {
               </div>
               <div className={classes.privilegeBlockItemText}>
                 <Typography variant="h3" weight="bold">
-                  Professional technicians
+                  Professional Technicians
                 </Typography>
                 <Typography variant="p" weight="bold">
-                  Always in clean uniforms, polite, well-groomed, and certified.
+                  Certified experts who arrive on time, in clean uniforms, ready to deliver fast, reliable appliance repairs.
                 </Typography>
               </div>
             </div>
@@ -44,11 +44,10 @@ const PrivilegeBlock = () => {
               </div>
               <div className={classes.privilegeBlockItemText}>
                 <Typography variant="h3" weight="bold">
-                  Reliable repairs
+                  Reliable Repairs
                 </Typography>
                 <Typography variant="p" weight="bold">
-                  Accurate diagnostics and high-quality fixes done right the
-                  first time.
+                  Accurate diagnostics and quality fixes done right the first time.
                 </Typography>
               </div>
             </div>
@@ -65,11 +64,10 @@ const PrivilegeBlock = () => {
               </div>
               <div className={classes.privilegeBlockItemText}>
                 <Typography variant="h3" weight="bold">
-                  Honest pricing
+                   Honest Pricing
                 </Typography>
                 <Typography variant="p" weight="bold">
-                  No surprises – you know the cost of labor and parts in
-                  advance.
+                  Upfront costs for labor and parts — no hidden fees, no surprises.
                 </Typography>
               </div>
             </div>
@@ -84,11 +82,10 @@ const PrivilegeBlock = () => {
               </div>
               <div className={classes.privilegeBlockItemText}>
                 <Typography variant="h3" weight="bold">
-                  Guaranteed parts
+                  Guaranteed Parts
                 </Typography>
                 <Typography variant="p" weight="bold">
-                  We use only certified (OEM) parts backed by the manufacturer’s
-                  warranty.
+                  We use only certified OEM parts backed by the manufacturer’s warranty.
                 </Typography>
               </div>
             </div>
