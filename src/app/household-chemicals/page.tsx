@@ -1,8 +1,104 @@
+// 'use client'
+
+// import ProductCard from '@modules/productCard/ProductCard'
+// import Link from 'next/link'
+// import { useEffect, useState } from 'react'
+// import { MultiContainer } from 'src/ui/multiContainer/multiContainer'
+// import styles from './style.module.scss'
+
+// interface Product {
+// 	id: number
+// 	title: string
+// 	image_url: string
+// 	price: number
+// 	is_available: boolean
+// 	description: string
+// }
+
+// const api = process.env.NEXT_PUBLIC_API
+// const PAGE_SIZE = 12;
+
+// export default function HouseholdChemicals() {
+// 	const [productsData, setProductsData] = useState<Product[]>([])
+
+// 	useEffect(() => {
+// 		const getProductsFromServer = async () => {
+// 			try {
+// 				const response = await fetch(`${api}/household_chemicals/`, {
+// 					method: 'GET',
+// 					credentials: 'include',
+// 					headers: {
+// 						'Content-Type': 'application/json',
+// 						'ngrok-skip-browser-warning': 'true',
+// 					},
+// 				})
+
+// 				if (!response.ok) {
+// 					throw new Error('Network response was not ok')
+// 				}
+
+// 				const data = await response.json()
+
+// 				// if (!data || !Array.isArray(data.results)) {
+// 				// 	throw new Error('Invalid data format')
+// 				// }
+// 				console.log(data)
+
+// 				setProductsData(data.results)
+// 			} catch (error) {
+// 				console.error('Error receiving data from API:', error)
+// 			}
+// 		}
+
+// 		getProductsFromServer()
+// 	}, [])
+
+// 	return (
+// 		<div className={styles.HouseholdChemicals}>
+// 			<MultiContainer>
+// 				<div className={styles.breadcrumbs}>
+// 					<span>
+// 						<Link href={'/'}>Home</Link>
+// 					</span>
+// 					<svg
+// 						width='62'
+// 						height='12'
+// 						viewBox='0 0 62 12'
+// 						fill='none'
+// 						xmlns='http://www.w3.org/2000/svg'
+// 					>
+// 						<path
+// 							d='M0.666667 6C0.666667 8.94552 3.05448 11.3333 6 11.3333C8.94552 11.3333 11.3333 8.94552 11.3333 6C11.3333 3.05448 8.94552 0.666667 6 0.666667C3.05448 0.666667 0.666667 3.05448 0.666667 6ZM50.6667 6C50.6667 8.94552 53.0545 11.3333 56 11.3333C58.9455 11.3333 61.3333 8.94552 61.3333 6C61.3333 3.05448 58.9455 0.666667 56 0.666667C53.0545 0.666667 50.6667 3.05448 50.6667 6ZM6 6V7L8.08333 7V6V5H6V6ZM12.25 6V7L16.4167 7V6V5L12.25 5V6ZM20.5833 6V7L24.75 7V6V5L20.5833 5V6ZM28.9167 6V7L33.0833 7V6V5L28.9167 5V6ZM37.25 6V7L41.4167 7V6V5L37.25 5V6ZM45.5833 6V7L49.75 7V6V5L45.5833 5V6ZM53.9167 6V7L56 7V6V5L53.9167 5V6Z'
+// 							fill='#4A8DFF'
+// 						/>
+// 					</svg>
+
+// 					<span>Household chemicals</span>
+// 				</div>
+
+// 				{productsData?.length === 0 ? (
+// 					<div className={styles.empty}>
+// 						<h2>The catalog is currently empty.</h2>
+// 						<p>Check back later — we will be adding new items soon.</p>
+// 					</div>
+// 				) : (
+// 					<div className={styles.productsData}>
+// 						{productsData?.map(product => (
+// 							<ProductCard key={product.id} {...product} />
+// 						))}
+// 					</div>
+// 				)}
+// 			</MultiContainer>
+// 		</div>
+// 	)
+// }
+
 'use client'
 
 import ProductCard from '@modules/productCard/ProductCard'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { useEffect, useMemo, useState } from 'react'
 import { MultiContainer } from 'src/ui/multiContainer/multiContainer'
 import styles from './style.module.scss'
 
@@ -16,14 +112,31 @@ interface Product {
 }
 
 const api = process.env.NEXT_PUBLIC_API
+const PAGE_SIZE = 8
 
 export default function HouseholdChemicals() {
+	const searchParams = useSearchParams()
+	const router = useRouter()
+
+	const initialPage = Number(searchParams.get('page')) || 1
+	const [page, setPage] = useState(initialPage)
 	const [productsData, setProductsData] = useState<Product[]>([])
+	const [totalPages, setTotalPages] = useState(1)
+
+	const goToPage = (p: number) => {
+		const next = Math.max(1, Math.min(totalPages, p))
+		setPage(next)
+		const sp = new URLSearchParams(window.location.search)
+		sp.set('page', String(next))
+		router.push(`?${sp.toString()}`)
+	}
 
 	useEffect(() => {
 		const getProductsFromServer = async () => {
 			try {
-				const response = await fetch(`${api}/household_chemicals/`, {
+				const url = `${api}/household_chemicals/?page=${page}&page_size=${PAGE_SIZE}`
+
+				const response = await fetch(url, {
 					method: 'GET',
 					credentials: 'include',
 					headers: {
@@ -31,33 +144,51 @@ export default function HouseholdChemicals() {
 						'ngrok-skip-browser-warning': 'true',
 					},
 				})
-
-				if (!response.ok) {
-					throw new Error('Network response was not ok')
-				}
+				if (!response.ok) throw new Error('Network response was not ok')
 
 				const data = await response.json()
+				setProductsData(data.results || [])
 
-				// if (!data || !Array.isArray(data.results)) {
-				// 	throw new Error('Invalid data format')
-				// }
-				console.log(data)
-
-				setProductsData(data.results)
-			} catch (error) {
-				console.error('Error receiving data from API:', error)
+				if (typeof data.total_pages === 'number') {
+					setTotalPages(Math.max(1, data.total_pages))
+				} else if (typeof data.count === 'number') {
+					setTotalPages(Math.max(1, Math.ceil(data.count / PAGE_SIZE)))
+				} else {
+					setTotalPages(page)
+				}
+			} catch (e) {
+				console.error('Error receiving data from API:', e)
 			}
 		}
 
 		getProductsFromServer()
-	}, [])
+	}, [page])
+
+	const pages = useMemo<(number | string)[]>(() => {
+		const siblingCount = 1
+		const totalNumbers = siblingCount * 2 + 5
+		if (totalPages <= totalNumbers) {
+			return Array.from({ length: totalPages }, (_, i) => i + 1)
+		}
+		const left = Math.max(page - siblingCount, 1)
+		const right = Math.min(page + siblingCount, totalPages)
+		const showLeftDots = left > 2
+		const showRightDots = right < totalPages - 1
+
+		const res: (number | string)[] = [1]
+		if (showLeftDots) res.push('…')
+		for (let i = left; i <= right; i++) res.push(i)
+		if (showRightDots) res.push('…')
+		res.push(totalPages)
+		return res
+	}, [page, totalPages])
 
 	return (
 		<div className={styles.HouseholdChemicals}>
 			<MultiContainer>
 				<div className={styles.breadcrumbs}>
 					<span>
-						<Link href={'/'}>Home</Link>
+						<Link href='/'>Home</Link>
 					</span>
 					<svg
 						width='62'
@@ -71,21 +202,51 @@ export default function HouseholdChemicals() {
 							fill='#4A8DFF'
 						/>
 					</svg>
-
 					<span>Household chemicals</span>
 				</div>
 
-				{productsData?.length === 0 ? (
+				{productsData.length === 0 ? (
 					<div className={styles.empty}>
 						<h2>The catalog is currently empty.</h2>
 						<p>Check back later — we will be adding new items soon.</p>
 					</div>
 				) : (
-					<div className={styles.productsData}>
-						{productsData?.map(product => (
-							<ProductCard key={product.id} {...product} />
-						))}
-					</div>
+					<>
+						<div className={styles.productsData}>
+							{productsData.map(product => (
+								<ProductCard key={product.id} {...product} />
+							))}
+						</div>
+
+						<div className={styles.pagination}>
+							<button disabled={page === 1} onClick={() => goToPage(page - 1)}>
+								← Prev
+							</button>
+
+							{pages.map((p, i) =>
+								typeof p === 'number' ? (
+									<button
+										key={p}
+										onClick={() => goToPage(p)}
+										className={`${styles.pageButton} ${page === p ? styles.activePage : ''}`}
+									>
+										{p}
+									</button>
+								) : (
+									<span key={`dots-${i}`} className={styles.dots}>
+										…
+									</span>
+								)
+							)}
+
+							<button
+								disabled={page === totalPages}
+								onClick={() => goToPage(page + 1)}
+							>
+								Next →
+							</button>
+						</div>
+					</>
 				)}
 			</MultiContainer>
 		</div>

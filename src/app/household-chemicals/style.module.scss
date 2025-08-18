@@ -92,3 +92,40 @@
 		}
 	}
 }
+.pagination {
+	margin-top: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+
+	button {
+		padding: 8px 12px;
+		border: 1px solid #e5e7eb;
+		background-color: #fff;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: 0.2s;
+
+		&:hover:not(:disabled) {
+			background: #f3f4f6;
+		}
+		&:disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+	}
+}
+
+.pageButton {
+	min-width: 36px;
+}
+.activePage {
+	background: #4a8dff !important;
+	border-color: #4a8dff;
+	color: #fff;
+}
+.dots {
+	padding: 0 6px;
+	user-select: none;
+}
