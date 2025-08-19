@@ -16,6 +16,7 @@ import { useEffect, useState } from 'react'
 import { Modal } from 'src/ui/modal/modal'
 import HeaderNav from '../headerNav/headerNav'
 import classes from './headerComponent.module.scss'
+import { useCart } from 'src/app/cart/CartContext'
 
 interface Slug {
 	name: string
@@ -38,10 +39,12 @@ const HeaderComponent = () => {
 		repair: [],
 		areas: [],
 	})
-  // const [isMounted, setIsMounted] = useState(false); // <-- Новое состояние
+
+	const { count } = useCart();
+  const [isMounted, setIsMounted] = useState(false); 
 
 	useEffect(() => {
-    // setIsMounted(true);
+    setIsMounted(true);
 		const fetchHeaderData = async () => {
 			const newData: Data = { brands: [], installs: [], repair: [], areas: [] }
 
@@ -120,7 +123,7 @@ const HeaderComponent = () => {
 								fill='white'
 							/>
 						</svg>
-						{/* {isMounted && totalItems > 0 && <span>{totalItems}</span>} */}
+						{isMounted && count > 0 && <span>{count}</span>}
 					</Link>
 					{isMenuOpen && (
 						<Modal onClose={() => setIsMenuOpen(false)} isOpen={isMenuOpen}>

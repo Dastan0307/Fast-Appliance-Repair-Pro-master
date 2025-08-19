@@ -24,13 +24,13 @@ export interface IWorks {
 export interface CartProduct {
   title: string
   price: string
-  image: string
   is_available: boolean
 }
 
 export interface CartItem {
   title: string
   id: number
+  image: string
   product: CartProduct
   description: string
   count: number

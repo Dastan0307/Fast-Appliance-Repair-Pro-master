@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@styles/globalStyles.scss";
 import ClientWrapper from "./clientWrapper";
+import { CartProvider } from './cart/CartContext'
 
 export const metadata: Metadata = {
   title: "Fast Appliance Repair Pro",
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <CartProvider>
         <ClientWrapper>{children}</ClientWrapper>
+        </CartProvider>
       </body>
     </html>
   );

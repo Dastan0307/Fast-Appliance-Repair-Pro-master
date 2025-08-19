@@ -11,12 +11,15 @@ import { useEffect, useState } from 'react'
 import styles from './cartPage.module.scss'
 import CheckoutModal from './CheckoutModal'
 import { CartItem } from '@utils/types'
+import { useCart } from './CartContext'
 
 
 export default function CartPage() {
 	const pathname = usePathname()
 	const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
 	const [cart, setCart] = useState<CartItem[]>([])
+
+	const { setCount } = useCart();	
 
 	const total = cart.reduce((sum, item) => sum + Number(item.total_price) * item.count, 0)
 
@@ -30,6 +33,10 @@ export default function CartPage() {
 	useEffect(() => {
 		getCart().then(setCart).catch(console.error)
 	}, [])
+
+	useEffect(() => {
+		setCount(cart.length)
+	}, [cart, setCount])
 
 	const refreshCart = () => {
 		getCart().then(setCart).catch(console.error)
@@ -46,7 +53,7 @@ export default function CartPage() {
 	const handleRemove = async (id: number) => {
 		try {
 			await removeCartItem(id)
-			setCart(prev => prev.filter(item => item.id !== id)) 
+			setCart(prev => prev.filter(item => item.id !== id))
 		} catch (error) {
 			console.error(error)
 		}
@@ -79,7 +86,7 @@ export default function CartPage() {
 							{cart.map((item: CartItem) => (
 								<div key={item.id} className={styles.cartItem}>
 									<Image
-										src={item.product.image}
+										src={item.image}
 										alt={item.product.title}
 										width={100}
 										height={100}

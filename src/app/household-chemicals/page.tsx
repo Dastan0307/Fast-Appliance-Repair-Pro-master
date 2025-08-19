@@ -147,6 +147,7 @@ export default function HouseholdChemicals() {
 				if (!response.ok) throw new Error('Network response was not ok')
 
 				const data = await response.json()
+
 				setProductsData(data.results || [])
 
 				if (typeof data.total_pages === 'number') {
