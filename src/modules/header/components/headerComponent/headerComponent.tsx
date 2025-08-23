@@ -13,10 +13,10 @@ import { navItems } from '@utils/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { useCart } from 'src/app/cart/CartContext'
 import { Modal } from 'src/ui/modal/modal'
 import HeaderNav from '../headerNav/headerNav'
 import classes from './headerComponent.module.scss'
-import { useCart } from 'src/app/cart/CartContext'
 
 interface Slug {
 	name: string
@@ -40,11 +40,11 @@ const HeaderComponent = () => {
 		areas: [],
 	})
 
-	const { count } = useCart();
-  const [isMounted, setIsMounted] = useState(false); 
+	const { count } = useCart()
+	const [isMounted, setIsMounted] = useState(false)
 
 	useEffect(() => {
-    setIsMounted(true);
+		setIsMounted(true)
 		const fetchHeaderData = async () => {
 			const newData: Data = { brands: [], installs: [], repair: [], areas: [] }
 

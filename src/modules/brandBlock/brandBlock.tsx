@@ -85,6 +85,7 @@ const BrandBlock = () => {
 			} catch (error) {
 				console.error('Failed to fetch header data:', error)
 				setImages([]) // fallback
+				
 			}
 		}
 

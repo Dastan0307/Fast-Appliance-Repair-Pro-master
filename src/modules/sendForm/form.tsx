@@ -34,7 +34,7 @@ const Form: FC<FormProps> = ({ isVacancy = false, isModal = false }) => {
 
   const validate = () => {
     const nameRegex = /^[A-Za-z]+ [A-Za-z]+$/;
-    const phoneRegex = /^\+1\d{10}$/;
+    const phoneRegex = /^\+1[\s\-()]*\d{3}[\s\-()]*\d{3}[\s\-()]*\d{4}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     const newErrors = {
@@ -56,7 +56,8 @@ const Form: FC<FormProps> = ({ isVacancy = false, isModal = false }) => {
           ? ""
           : "Enter a correct email.",
 
-      address: !formData.address.trim() ? "Required field" : "",
+      // address: !formData.address.trim() ? "Required field" : "",
+       address: !isVacancy && !formData.address.trim() ? "Required field" : "",
 
       vacancy: !formData.vacancy.trim() ? "Required field" : "",
 

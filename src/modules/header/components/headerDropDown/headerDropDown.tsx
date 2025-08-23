@@ -44,6 +44,8 @@ const HeaderDropDown: React.FC<HeaderDropDownProps> = ({
       className={`${classes.dropdown} ${classes[`dropdown--arrow-${arrowPosition}`]}`}
       style={{
         left: isBrandsOrServices ? "0" : "0",
+        maxHeight: '500px',
+        overflow: 'auto'
       }}
       onMouseEnter={() => setActiveDropdown && setActiveDropdown(item.label)}
       onMouseLeave={() => setActiveDropdown && setActiveDropdown(null)}

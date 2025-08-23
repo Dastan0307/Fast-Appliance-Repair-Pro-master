@@ -11,6 +11,9 @@ interface Brand {
 export default async function BrandsBlock() {
   const results = await getHeaderBrands();
 
+  console.log('results', results);
+  
+
   if (!results) {
     return null;
   }
